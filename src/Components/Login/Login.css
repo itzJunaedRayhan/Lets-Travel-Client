@@ -1,0 +1,61 @@
+.login-form{
+    max-width: 500px;
+    margin: 200px auto 70px auto;
+}
+.form{
+    background-color: #ffffff;
+    max-width: 100%;
+    margin: 0 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px -3px #333;
+    text-align: center;
+}
+.form img{
+    display: block;
+    width: 80px;
+    margin: 30px auto;
+    box-shadow: 0 5px 10px -7px #333333;
+    border-radius: 50%;
+}
+.form input{
+    border-radius: 100px;
+    padding: 10px 5px;
+    width: 90%;
+    border: 1px solid #D9D9D9;
+    outline: none;
+    display: block;
+    margin: 20px auto 20px auto;
+    font-family: monospace;
+}
+.form input::placeholder{
+    color: #79736f !important;
+}
+.form button{
+    border-radius: 100px;
+    border: none;
+    background: #ff6600;
+    width: 65%;
+    padding: 10px;
+    color: #FFFFFF;
+    box-shadow: 0 2px 20px -3px #ff6600;
+    display: block;
+    margin: 35px auto 10px auto;
+}
+.form a{
+    text-align: center;
+    margin: 20px 0;
+    color: #ff6600;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+}
+.form a:hover {
+    text-decoration: underline;
+}
+
+@media (min-height: 315px) and (max-width: 500px){
+    .login-form{
+        margin: 100px auto 70px auto;
+    }
+}

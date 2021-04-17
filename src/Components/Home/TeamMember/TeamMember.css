@@ -1,0 +1,22 @@
+.members{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.team-header h3{
+    font-size: 18px;
+    padding-bottom: 7px;
+    font-weight: bold;
+    width: 150px;
+    margin: 0 auto;
+    border-bottom: 4px solid #ff6600;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+.team-header h2{
+    letter-spacing: 5px;
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}

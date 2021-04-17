@@ -1,0 +1,87 @@
+.member{
+    width: 300px;
+    padding: 40px 0 0px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin: 20px;
+    text-align: center;
+}
+.member-image{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.member-image:hover .social{
+    opacity: 1;
+    left: 50%;
+}
+.member-image img{
+    width: 100%;
+}
+.member .social{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: -50%;
+    transform: translateX(-50%);
+    background: #ff6600;
+    display: block;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+}
+.member .social ul li{
+    list-style: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50% 10px;
+}
+.member .social ul li a{
+    color: white;
+    font-size: 24px;
+}
+.member-content{
+    padding:10px 15px;
+}
+.member h6{
+    font-size: 12px;
+    color: rgb(153, 142, 142);
+    padding-top: 0px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.member-content h5{
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.member-content p{
+    color: rgb(153, 142, 142);
+}
+
+
+
+
+
+@media only screen and (max-width: 768px){
+    .member{
+        width: 260px;
+    }
+}
+@media (min-width: 950px) and (max-width: 1200px){
+    .member{
+        width: 240px;
+    }
+    .member-content h5{
+        font-size: 17px;
+    }
+    .member-content h6{
+        font-size: 14px;
+    }
+    .member-content p{
+        font-size: 12px;
+    }
+}

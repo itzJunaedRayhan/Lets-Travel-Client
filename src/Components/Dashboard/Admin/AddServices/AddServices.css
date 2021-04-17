@@ -1,0 +1,72 @@
+.add-services h1{
+    padding: 20px;
+    color: black;
+}
+.add-services form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.add-services form input{
+    padding: 25px 10px;
+}
+.add-services textarea{
+    max-height: 150px !important;
+    width: 100%;
+}
+::placeholder{
+    color: #817c78 !important;
+    font-size: 12px;
+}
+.add-services form .col-md-6{
+    padding: 0 !important;
+}
+.service-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.serviceBtn{
+    background-color: #ff6600;
+    width: 95%;
+    border: 3px solid #ff6600;
+    border-radius: 20px;
+    color: white !important;
+    padding: 5px 5px 7px 15px;
+    transition: all 0.8s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+.serviceBtn:hover{
+    border: 3px solid #ff6600;
+    background-color: transparent;
+    color: #ff6600 !important;
+}
+[type="file"] {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+[type="file"] + label {
+    background: #f15d22;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+    padding: 10px 20px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+} 
+[type="file"] + label:hover{
+    background-color: transparent;
+    color: #f15d22;
+    border: 2px solid #f15d22;
+}

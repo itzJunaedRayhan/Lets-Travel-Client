@@ -1,0 +1,30 @@
+.banner-section{
+    height: 70vh;
+    width: 92%;
+    margin: -1% 0% 0% 4%;
+    background-image: url('../../../images/banner-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+@media (min-width: 320px) and (max-width: 550px){
+    .banner-section{
+        max-height: 55vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

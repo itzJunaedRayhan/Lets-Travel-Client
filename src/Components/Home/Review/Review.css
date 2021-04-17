@@ -1,0 +1,50 @@
+.review-header h3{
+    font-size: 18px;
+    padding-bottom: 7px;
+    font-weight: bold;
+    width: 150px;
+    margin: 0 auto;
+    border-bottom: 4px solid #fff;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.review-header h2{
+    letter-spacing: 5px;
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.client-review{
+    padding-top: 40px;
+}
+.client-review h1{
+    color: #ff6600;
+    font-size: 50px;
+}
+.client-review h2{
+    color: rgb(187, 179, 179);
+    font-size: 20px;
+}
+.client-review p{
+    color: rgb(187, 179, 179);
+    font-size: 14px;
+    width: 750px;
+    margin: 0 auto;
+}
+
+
+
+@media (min-width: 310px) and (max-width: 450px){
+    .client-review p{
+        width: 90%;
+    }
+    .client-review h1{
+        font-size: 36px;
+    }
+    .client-review h2{
+        font-size: 16px;
+    }
+    .review-header h2{
+        font-size: 20px;
+    }
+}

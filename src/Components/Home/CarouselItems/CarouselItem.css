@@ -1,0 +1,33 @@
+.carousel .thumbs {
+    display: none !important;
+}
+.carousel .slide .legend {
+    display: none !important;
+}
+.carousel-section .carousel.carousel-slider .control-arrow {
+    display: none !important;
+}
+.carousel .control-dots .dot {
+    transition: opacity .25s ease-in;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 90%);
+    background: #ff6600;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 8px;
+}
+.carousel .control-dots {
+    position: absolute;
+    bottom: 33% !important;
+    padding-bottom: 0px;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+.carousel .carousel-status {
+    display: none;
+}
