@@ -36,6 +36,7 @@ const Login = () => {
             setUser(UserData)
             setLoggedInUser(UserData)
             history.replace(from)
+            setUserToken()
         })
         .catch((error)=>{
             let errorCode = error.code;
@@ -44,7 +45,13 @@ const Login = () => {
         })
     }
 
-
+    const setUserToken = () =>{
+        firebase.auth().currentUser.getIdToken(true)
+        .then(function(idToken) {
+            sessionStorage.setItem('token',idToken)
+          }).catch(function(error) {
+          });
+    }
     
     return (
         <div className="login">

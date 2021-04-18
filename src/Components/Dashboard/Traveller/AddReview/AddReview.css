@@ -1,34 +1,32 @@
-.bookings h3{
+
+.add-review h1{
     padding: 20px;
     color: black;
 }
-.bookings form{
+.add-review form{
     max-width: 600px;
     margin: 0 auto;
 }
-.bookings form input{
+.add-review form input{
     padding: 25px 10px;
-    font-size: 14px;
-    color: #ff6600 !important;
-    font-weight: bold;
-    font-family: monospace;
-    padding-left: 20px;
+}
+.add-review textarea{
+    max-height: 150px !important;
+    width: 100%;
 }
 ::placeholder{
     color: #817c78 !important;
     font-size: 12px;
 }
-.bookings form .col-md-6{
-    padding: 0 !important;
-}
-.booking-footer{
+
+.submit-footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.bookingBtn{
+.submitBtn{
     background-color: #ff6600;
-    width: 130px;
+    max-width: 200px;
     border: 3px solid #ff6600;
     border-radius: 20px;
     color: white !important;
@@ -37,9 +35,8 @@
     font-size: 16px;
     font-weight: bold;
 }
-.bookingBtn:hover{
+.submitBtn:hover{
     border: 3px solid #ff6600;
     background-color: transparent;
     color: #ff6600 !important;
 }
-

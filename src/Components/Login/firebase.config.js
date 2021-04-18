@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyBvVlo6MLqnnU9Xc5j5OnfmvPnCsCe0FXs",
-    authDomain: "webgenesis-let-s-travel.firebaseapp.com",
-    projectId: "webgenesis-let-s-travel",
-    storageBucket: "webgenesis-let-s-travel.appspot.com",
-    messagingSenderId: "28645769191",
-    appId: "1:28645769191:web:2ce4c55f659fdf0a344742"
-};
+    apiKey: "AIzaSyCwv6rgYae43Ol7n97j8pvnb4cKRfalr3E",
+    authDomain: "web-genesis-travel-agency.firebaseapp.com",
+    projectId: "web-genesis-travel-agency",
+    storageBucket: "web-genesis-travel-agency.appspot.com",
+    messagingSenderId: "201411810570",
+    appId: "1:201411810570:web:8e8f1e31ce7ef1a3d9d6f3"
+  };
 
 export default firebaseConfig;

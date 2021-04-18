@@ -7,10 +7,11 @@ import { useEffect } from 'react';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3500/services')
+        fetch('http://localhost:3500/allServices')
         .then(res => res.json())
         .then(data => setServices(data))
     },[])
+    console.log(services)
     return (
         <section className = "services-section py-5">
             <div className="service-header text-center">

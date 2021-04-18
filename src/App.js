@@ -7,6 +7,8 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
 import { createContext, useState } from 'react';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Admin from './Components/Dashboard/Admin/Admin/Admin';
+import BookingList from './Components/Dashboard/Traveller/BookingList/BookingList';
+import AddReview from './Components/Dashboard/Traveller/AddReview/AddReview';
 export const userContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -27,9 +29,18 @@ function App() {
             <PrivateRoute path="/dashboard/book/:id">
               <Dashboard/>
             </PrivateRoute>
-            <Route path="/admin/addService">
-              <Admin/>
+            <PrivateRoute path="/dashboard/book/:id">
+              <Dashboard/>
+            </PrivateRoute>
+            <Route path="/dashboard/bookingList">
+              <BookingList/>
             </Route>
+            <Route path="/dashboard/addReview">
+              <AddReview/>
+            </Route>
+            <PrivateRoute path="/admin/addService">
+              <Admin/>
+            </PrivateRoute>
         </Switch>
       </Router>
     </userContext.Provider>

@@ -1,88 +1,102 @@
 import React from 'react';
 import './Bookings.css'
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import { useParams } from 'react-router';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useContext } from 'react';
 import { userContext } from '../../../../App';
+import CardForm from '../CardForm/CardForm';
+import PaymentSystem from '../PaymentSystem/PaymentSystem';
 const Bookings = () => {
-    const {id} = useParams()
+    const { id } = useParams()
     const [loggedInUser, setLoggedInUser] = useContext(userContext)
     const [services, setServices] = useState({})
-    const [Booking, setBooking] = useState({})
+    const [Booking, setBooking] = useState(null)
+    
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = (paymentInfo) => {
-        setBooking(paymentInfo)
+    const onSubmit = (data) => {
+        let OrderStatus = 'pending';
+        const OrderInfo = {...data, OrderStatus}
+        setBooking(OrderInfo)
+        const AddStatus = {...loggedInUser, OrderStatus}
+        setLoggedInUser(AddStatus);
+    }
+    console.log(Booking)
+    useEffect(() => {
+        fetch('http://localhost:3500/services/' + id)
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, [id])
+
+    const handlePaymentSuccess = (paymentId) => {
         const BookingDetails = {
             ...loggedInUser,
-            package : services,
-            paymentInfo,
-            orderDate : new Date()
+            package: services,
+            Booking,
+            paymentId,
+            orderDate: new Date()
         }
-        console.log(BookingDetails)
-    };
-    useEffect(()=>{
-        fetch('http://localhost:3500/services/'+id)
+        fetch('http://localhost:3500/addBooking',{
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify(BookingDetails)
+        })
         .then(res => res.json())
-        .then(data => setServices(data))
-    },[id])
+        .then(data =>{
+            if(data){
+                alert('Your Order Placed Successfully')
+            }
+        })
+    }
     return (
-        <div className="col-md-8" style={{padding: '0px'}}>
-            <div className="bookings">
-                <h1>Book</h1>
-                <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
-                    <div className="form-group">
-                        <input className="form-control" defaultValue={loggedInUser.name} placeholder="Your Name" {...register("name", { required: true })} />
-                        {errors.name && <span>This field is required</span>}
+            <>
+                <div className="col-md-8" style={{ display: Booking ? 'none' : 'block' }}>
+                    <div className="bookings">
+                        <h3>Book Your Ticket</h3>
+                        <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
+                            <div className="form-group">
+                                <input className="form-control" defaultValue={loggedInUser.name} placeholder="Your Name" {...register("name", { required: true })} />
+                                {errors.name && <span>This field is required</span>}
+                            </div>
+                            <div className="form-group">
+                                <input type="email" defaultValue={loggedInUser.email} className="form-control" placeholder="Your Email" {...register("email", { required: true })} />
+                                {errors.email && <span className="text-danger">This Field is required</span>}
+                            </div>
+                            <div className="form-group">
+                                <input className="form-control" defaultValue={services.name} placeholder="Your Packages" {...register("package", { required: true })} />
+                            </div>
+                            <div className="form-group row booking-footer">
+                                <button type="submit" className="bookingBtn">Next</button>
+                            </div>
+                        </form>
                     </div>
-                    <div className="form-group">
-                        <input type="email" defaultValue={loggedInUser.email} className="form-control" placeholder="Your Email" {...register("email", { required: true })} />
-                        {errors.email && <span className="text-danger">This Field is required</span>}
-                    </div>
-                    <div className="form-group">
-                        <input className="form-control" defaultValue={services.name} placeholder="Your Packages" {...register("package", { required: true })} />
-                    </div>
+                </div>
+                <div className="col-md-8" style={{ display: Booking ? 'block' : 'none' }}>
+                    <p className="text-center text-warning">You Have Charged {services.price}</p>
                     <div className="form-group row">
-                        <div className="col-md-6">
-                            <div class="form-check">
-                                <input class="form-check-input" value="credit" type="radio" name="credit" {...register("card")} checked/>
-                                <label class="form-check-label">
-                                    Credit Card
+                                <div className="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" value="credit" type="radio" name="credit" {...register("card")} checked />
+                                        <label class="form-check-label">
+                                            Credit Card
                                 </label>
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" value="paypal" type="radio" name="paypal" {...register("card")} />
+                                        <label class="form-check-label">
+                                            Paypal
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div class="form-check">
-                            <input class="form-check-input" value="paypal" type="radio" name="paypal" {...register("card")}/>
-                            <label class="form-check-label">
-                                Paypal
-                            </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="form-group">
-                        <input className="form-control" type="number" placeholder="Card Number" {...register("cardNumber", { required: true })} />
-                    </div>
-                    <div className="form-group row">
-                        <div className="col-md-6 pr-3">
-                            <div className="form-group">
-                            <input className="form-control" type="number" placeholder="MM/ YY" {...register("mmYY", { required: true })} />
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="form-group">
-                            <input className="form-control" type="number" placeholder="CVC" {...register("cvc", { required: true })} />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="form-group row booking-footer">
-                        <p>You Have Charged {services.price}</p>
-                        <button type="submit" className="bookingBtn">Send</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+                    <PaymentSystem handlePayment={handlePaymentSuccess}></PaymentSystem>
+                </div>
+            </>
     );
 };
 
