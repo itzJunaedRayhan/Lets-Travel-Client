@@ -2,12 +2,25 @@ import React, { useContext, useState } from 'react';
 import './Orders.css'
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
-import { userContext } from '../../../../App';
 
 const Orders = (props) => {
-    const {name, email, card, OrderStatus} = props.booking.Booking;
-    const handleSelect=(e)=>{
-        console.log(e)
+    console.log(props.booking.OrderStatus)
+    const {name, email} = props.booking.Booking;
+    const {_id} = props.booking;
+    const handleSelect=(event, id)=>{
+        const status = event;
+        const UpdateInfo = {id, status};
+        fetch(`http://localhost:3500/update/${id}`, {
+            method: 'PATCH',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(UpdateInfo)
+        })
+        .then(res => res.json())
+        .then(result => {
+            if(result){
+                alert('You Have Changed Order Status !')
+            }
+        })
     }
     return (
         <tbody>
@@ -19,10 +32,10 @@ const Orders = (props) => {
             <td data-label="Status">
             <DropdownButton
                 alignRight
-                title= "select"
+                title= {`${props.booking.OrderStatus}`}
                 className="d-inline-table"
                 id="dropdown-menu-align-right"
-                onSelect={handleSelect}
+                onSelect={(event)=>{handleSelect(event,_id)}}
                     >
                         <Dropdown.Item eventKey="Pending">Pending</Dropdown.Item>
                         <Dropdown.Item eventKey="On Going">On Going</Dropdown.Item>

@@ -16,6 +16,7 @@
     width: 100%;
 }
 .dashboard-section .col-md-4{
+    position: fixed !important;
     z-index: 9999999999999 !important;
 }
 

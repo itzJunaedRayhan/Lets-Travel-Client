@@ -20,7 +20,7 @@ const TravellerSidebar = () => {
         .then(data => setAdmin(data))
     },[])
     return (
-        <div className="col-md-4 traveller" style={{position: 'fixed'}}>
+        <div className="col-md-4 traveller" style={{position: 'fixed !important'}}>
             <Navbar collapseOnSelect expand="lg" variant="dark">
                 <Navbar.Brand className="brand"><Link to="/home">Let's Travel</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

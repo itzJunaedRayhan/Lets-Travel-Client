@@ -1,4 +1,5 @@
 import React from 'react';
+import './BookingList.css'
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -8,7 +9,10 @@ import Booked from '../Booked/Booked';
 
 const BookingList = () => {
     const [bookList, setBookList] = useState([]);
+    const [status, setStatus] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(userContext)
+
+    //  For Get Book List By Email
     useEffect(()=>{
         fetch('http://localhost:3500/bookListByEmail', {
             method: 'POST',
@@ -20,7 +24,6 @@ const BookingList = () => {
             setBookList(data)
         }) 
     },[])
-    console.log(bookList, 'Booking List')
     return (
         <section className="booking-list">
             <div className="row">
