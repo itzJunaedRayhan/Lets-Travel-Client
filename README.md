@@ -45,4 +45,5 @@ Admin Panel :
         2.  Server  =>    https://github.com/Porgramming-Hero-web-course/complete-website-server-itzJunaedRayhan
 
     website Hosting Links:
-        1.  Client  =>    
+        1.  Client  => https://web-genesis-travel-agency.web.app/   
+        2.  server  => https://frozen-taiga-77038.herokuapp.com/

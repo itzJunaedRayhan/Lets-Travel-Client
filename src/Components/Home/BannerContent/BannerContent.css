@@ -43,7 +43,7 @@
     border: 1px solid transparent;
     border-right: none;
     padding: 5px;
-    height: 20px;
+    height: 20px !important;
     outline: none;
     color: #fff !important;
     font-family: monospace;
