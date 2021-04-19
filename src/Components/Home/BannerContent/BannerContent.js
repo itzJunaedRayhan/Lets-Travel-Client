@@ -2,6 +2,7 @@ import React from 'react';
 import './BannerContent.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 const BannerContent = () => {
     return (
         <div className="banner-content">
@@ -17,7 +18,9 @@ const BannerContent = () => {
                     </button>
                 </div>
             </div>
-            <button type="submit" className="banner-btn">Book Now</button>
+            <Link to="/login">
+                <button type="submit" className="banner-btn">Book Now</button>
+            </Link>
         </div>
     );
 };

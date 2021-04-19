@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from './Components/Home/Home/Home';
@@ -9,6 +9,9 @@ import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import Admin from './Components/Dashboard/Admin/Admin/Admin';
 import BookingList from './Components/Dashboard/Traveller/BookingList/BookingList';
 import AddReview from './Components/Dashboard/Traveller/AddReview/AddReview';
+import OrderList from './Components/Dashboard/Admin/OrderList/OrderList';
+import Manage from './Components/Dashboard/Admin/Manage/Manage';
+import AddAdmin from './Components/Dashboard/Admin/AddAdmin/AddAdmin';
 export const userContext = createContext()
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
@@ -29,9 +32,9 @@ function App() {
             <PrivateRoute path="/dashboard/book/:id">
               <Dashboard/>
             </PrivateRoute>
-            <PrivateRoute path="/dashboard/book/:id">
+            <Route path="/dashboard/book">
               <Dashboard/>
-            </PrivateRoute>
+            </Route>
             <Route path="/dashboard/bookingList">
               <BookingList/>
             </Route>
@@ -41,6 +44,15 @@ function App() {
             <PrivateRoute path="/admin/addService">
               <Admin/>
             </PrivateRoute>
+            <Route path="/admin/orderList">
+              <OrderList/>
+            </Route>
+            <Route path="/admin/manage">
+              <Manage/>
+            </Route>
+            <Route path="/admin/makeAdmin">
+              <AddAdmin/>
+            </Route>
         </Switch>
       </Router>
     </userContext.Provider>

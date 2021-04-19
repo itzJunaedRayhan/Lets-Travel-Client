@@ -1,0 +1,24 @@
+.row{
+    position: relative !important;
+    margin: 0%;
+    padding: 0%;
+}
+
+.col-md-8{
+    position: absolute !important;
+    right: 10px;
+    top:  0;
+    width: 100%;
+}
+.admin-section .col-md-8{
+    z-index: -1;
+}
+@media only screen and (max-width: 767px){
+    .col-md-8{
+        position: absolute !important;
+        right: 0px;
+        top: 100px;
+        width: 100%;
+        z-index: -1 !important;
+    }
+}

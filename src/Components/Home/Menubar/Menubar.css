@@ -7,6 +7,14 @@
 .brand{
     margin: 0 10px 10px 15px;
 }
+.brand a{
+    font-family: fantasy;
+    color: #ff5100;
+    transition: color 0.7s ease;
+}
+.brand a:hover{
+    color: white !important;
+}
 body {
     color: #000000;
     font-family: Sans-Serif;

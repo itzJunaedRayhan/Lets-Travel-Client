@@ -3,3 +3,19 @@
     width: 100%;
     min-height: 100vh;
 }
+.row{
+    position: relative !important;
+    margin: 0%;
+    padding: 0%;
+}
+.dashboard-section .col-md-8 {
+    z-index: 999999 !important;
+    position: absolute !important;
+    right: 10px;
+    top:  0;
+    width: 100%;
+}
+.dashboard-section .col-md-4{
+    z-index: 9999999999999 !important;
+}
+

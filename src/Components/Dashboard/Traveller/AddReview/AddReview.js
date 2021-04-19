@@ -10,7 +10,6 @@ const AddReview = () => {
             <div className="row">
             <TravellerSidebar/>
             <div className="col-md-8 add-review">
-                <h3>Add Review</h3>
                 <ReviewForm/>
             </div>
             </div>

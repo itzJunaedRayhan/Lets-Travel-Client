@@ -45,7 +45,7 @@
     padding: 5px;
     height: 20px;
     outline: none;
-    color: #fff;
+    color: #fff !important;
     font-family: monospace;
     background-color: transparent;
 }
@@ -67,7 +67,7 @@
 
 
 
-::placeholder{
+.search-box input::placeholder{
     color: #fff !important;
     font-weight: bold;
     padding-left: 15px;

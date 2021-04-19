@@ -57,7 +57,7 @@ a:hover{
 @media (min-width: 1000px){
     .admin{
         float: left;
-        position: relative !important;
+        position: fixed !important;
     }
     .col-md-4{
         max-width: 300px !important;

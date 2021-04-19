@@ -15,12 +15,17 @@
     overflow: hidden;
     object-fit: contain;
 }
-.service img{
+.service-image img{
     width: 100%;
     min-height: 100%;
     margin: 0;
     padding: 0px !important;
     border-radius: 7px;
+    transform: scale(1);
+    transition: transform .7s ease;
+}
+.service-image img:hover{
+    transform: scale(1.5);
 }
 .service-content{
     padding:10px 15px;
@@ -37,6 +42,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.service-footer h1{
+    font-size: 20px;
 }
 .service-btn{
     background: #ff6600;

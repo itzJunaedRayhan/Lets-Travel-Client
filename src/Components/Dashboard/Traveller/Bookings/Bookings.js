@@ -53,9 +53,9 @@ const Bookings = () => {
     }
     return (
             <>
-                <div className="col-md-8" style={{ display: Booking ? 'none' : 'block' }}>
+                <div className="col-md-8" style={{ display: Booking ? 'none' : 'block',}}>
                     <div className="bookings">
-                        <h3>Book Your Ticket</h3>
+                        <h3 className="py-4">Book Your Ticket</h3>
                         <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">
                                 <input className="form-control" defaultValue={loggedInUser.name} placeholder="Your Name" {...register("name", { required: true })} />

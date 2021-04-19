@@ -4,9 +4,9 @@ const Booked = ({booked}) => {
     return (
         <tbody>
             <tr>
-            <td>{booked.Booking.package}</td>
-            <td>{booked.package.price}</td>
-            <td>{booked.Booking.OrderStatus}</td>
+            <td data-label="Package">{booked.Booking.package}</td>
+            <td data-label="Price">{booked.package.price}</td>
+            <td data-label="Status">{booked.Booking.OrderStatus}</td>
             </tr>
         </tbody>
     );

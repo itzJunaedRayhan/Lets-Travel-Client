@@ -15,6 +15,7 @@ const Blog = ({blog}) => {
                 <div className="comment"><FontAwesomeIcon className="icon" icon={faComment} /><span>{blog.comment}</span></div>
             </div>
             <p>{blog.text}</p>
+            <button type="submit" className="btn btn-danger">Read More</button>
         </div>
     );
 };

@@ -44,6 +44,7 @@ a:hover{
     padding-left: 30%;
     position: absolute !important;
     right: 0% !important;
+    margin-right: 15px;
 }
 /***********    Responsive      ***********/
 @media (min-width: 768px){

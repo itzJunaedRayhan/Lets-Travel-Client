@@ -19,6 +19,8 @@ const ReviewForm = () => {
         .then(res => console.log('server side response', res))
     }
     return (
+            <>
+                <h3 className="p-4">Add Review</h3>
             <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                         <input className="form-control" placeholder="Your Name" {...register("name", { required: true })} />
@@ -36,6 +38,7 @@ const ReviewForm = () => {
                         <button type="submit" className="submitBtn">Submit</button>
                     </div>
                 </form>
+            </>
     );
 };
 
