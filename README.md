@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+    if you read this you will understand 50% of my Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+WebSite Name : Let's Travel
+Website Features :
+    1.  Full website Responsive Design
 
-In the project directory, you can run:
+    2.  A Awesome Banner Section with Carousel and Hamburger Menu
 
-### `yarn start`
+    3.  Total 10 section Created
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    4.  UnAuthorized Person Cannot Buy a Service, User Have to Login First
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    5.  Booked Order with Stripe Payment System
 
-### `yarn test`
+    6.  User can see his Booked Services
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    7.  User Can Review about services and It will show on Home Pay Review section
+    
+Admin Panel :
+    1.  On Navbar you can see a Menu name Admin
 
-### `yarn build`
+    2.  If you click on Admin You have to Login first
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    3.  After Loggin if you are admin you can access Sidebar all of menus including User's option
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    4.  If you a user and Logged in "Admin" then you can't see "Admin Option". It will avilable only for Admin
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    6.  An Admin can "Add a New service" it show on Home page
 
-### `yarn eject`
+    7.  An Admin can see All of "Order List" from created by user and Admin can Change A "STATUS" to 
+        "Pending" or "Done or Ongoing"
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    8.  An Admin can "Make a New Admin"
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    9.  An Admin can delete an Order from "Manage  Service Option"
+    
+    10.   Animated Image Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    11.   "programminghero001@gmail.com" Email added as a Admin 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+    website Github Links:
+        1.  Client  =>   https://github.com/Porgramming-Hero-web-course/complete-website-client-itzJunaedRayhan
+        2.  Server  =>    https://github.com/Porgramming-Hero-web-course/complete-website-server-itzJunaedRayhan
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    website Hosting Links:
+        1.  Client  =>    
