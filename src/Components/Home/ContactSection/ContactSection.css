@@ -1,0 +1,28 @@
+.contact-section{
+    margin-top: 70px;
+    padding: 50px 0;
+    background: #292a2b;
+    color: white;
+}
+.contact-section .contact-header h3{
+    font-size: 18px;
+    padding-bottom: 7px;
+    font-weight: bold;
+    width: 150px;
+    margin: 0 auto;
+    border-bottom: 4px solid #ff6600;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+.contact-section .contact-header h2{
+    letter-spacing: 5px;
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+.contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
