@@ -24,7 +24,7 @@ const Bookings = () => {
     }
     console.log(Booking)
     useEffect(() => {
-        fetch('http://localhost:3500/services/' + id)
+        fetch('https://frozen-taiga-77038.herokuapp.com/services/' + id)
             .then(res => res.json())
             .then(data => setServices(data))
     }, [id])
@@ -37,7 +37,7 @@ const Bookings = () => {
             paymentId,
             orderDate: new Date()
         }
-        fetch('http://localhost:3500/addBooking',{
+        fetch('https://frozen-taiga-77038.herokuapp.com/addBooking',{
             method : 'POST',
             headers : {
                 'Content-Type' : 'application/json'

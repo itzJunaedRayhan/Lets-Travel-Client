@@ -14,7 +14,7 @@ const BookingList = () => {
 
     //  For Get Book List By Email
     useEffect(()=>{
-        fetch('http://localhost:3500/bookListByEmail', {
+        fetch('https://frozen-taiga-77038.herokuapp.com/bookListByEmail', {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify({email: loggedInUser.email})

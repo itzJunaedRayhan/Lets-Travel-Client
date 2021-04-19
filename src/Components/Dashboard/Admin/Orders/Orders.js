@@ -10,7 +10,7 @@ const Orders = (props) => {
     const handleSelect=(event, id)=>{
         const status = event;
         const UpdateInfo = {id, status};
-        fetch(`http://localhost:3500/update/${id}`, {
+        fetch(`https://frozen-taiga-77038.herokuapp.com/update/${id}`, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(UpdateInfo)

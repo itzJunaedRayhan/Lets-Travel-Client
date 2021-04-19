@@ -8,7 +8,7 @@ import Orders from '../Orders/Orders';
 const OrderList = () => {
     const [bookList, setBookList] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:3500/bookingList')
+        fetch('https://frozen-taiga-77038.herokuapp.com/bookingList')
         .then(res => res.json())
         .then(data => {
             setBookList(data)

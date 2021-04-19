@@ -7,7 +7,7 @@ import ManageBookings from '../ManageBookings/ManageBookings';
 const Manage = () => {
     const [manageOrder, setManageOrder] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:3500/bookingList')
+        fetch('https://frozen-taiga-77038.herokuapp.com/bookingList')
         .then(res => res.json())
         .then(data => {
             setManageOrder(data)

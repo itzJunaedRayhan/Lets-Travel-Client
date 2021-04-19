@@ -8,7 +8,7 @@ const ManageBookings = (props) => {
 
     const handleDelete = (event, id)=> {
         console.log(event.target.parentNode.parentNode.parentNode)
-        fetch(`http://localhost:3500/delete/${id}`,{
+        fetch(`https://frozen-taiga-77038.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
         .then(res => res.json())

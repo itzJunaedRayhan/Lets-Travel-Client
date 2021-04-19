@@ -8,7 +8,7 @@ const ReviewForm = () => {
             company : data.company,
             desc : data.desc
         }
-        const url = `http://localhost:3500/addReview`
+        const url = `https://frozen-taiga-77038.herokuapp.com/addReview`
         fetch(url, {
             method: 'POST',
             headers: {

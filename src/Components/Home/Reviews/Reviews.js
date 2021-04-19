@@ -10,7 +10,7 @@ import { useState } from 'react';
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3500/reviews')
+        fetch('https://frozen-taiga-77038.herokuapp.com/reviews')
         .then(response => response.json())
         .then(data => setReviews(data))
     },[])

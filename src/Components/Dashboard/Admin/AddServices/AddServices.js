@@ -15,7 +15,7 @@ const AddServices = () => {
                 desc : data.desc,
                 imgURL : imgURL
             }
-            const url = `http://localhost:3500/addProducts`
+            const url = `https://frozen-taiga-77038.herokuapp.com/addProducts`
             fetch(url, {
                 method: 'POST',
                 headers: {
