@@ -24,14 +24,15 @@ const Menubar = () => {
                     </a>
                 </div>
                 <div className="hamburger-profile">
+                    <Link to="/admin/addService">
                     <img src={profile} alt="" className="profile"/>
+                    </Link>
                 </div>
             </div>
             
             <div className="brand">
                 <a href="">
                     Let's Travel
-                    {/* <img src={brand} alt="" height="75px" width="75px" className="img-responsive"/> */}
                 </a>
             </div>
             <div className="menu-items ml-auto">
