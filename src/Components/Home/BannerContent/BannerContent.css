@@ -52,7 +52,7 @@
 .search-btn{
     position: absolute;
     right: 0;   
-    top: -4px;
+    top: -10px;
     width: 40px;
     height: 40px;
     border: 1px solid transparent;
@@ -102,7 +102,7 @@
 
 @media (min-width: 320px) and (max-width: 550px){
     .searchbar{
-        width: 330px;
+        width: 230px;
     }
     .dropdown{
         width: 70px !important;
@@ -115,7 +115,7 @@
         height: 32px;
     }
     .search{
-        padding-bottom: 13px !important;
+        padding-bottom: 5px !important;
     }
     
     ::placeholder{
@@ -162,7 +162,7 @@
         padding-bottom: 80px;
     }
 }
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 720px) and (max-width: 1024px){
     .header-text{
         width: 100%;
         padding: 40px 10px 5px 40px;
@@ -177,19 +177,29 @@
     .banner-content {
         height: 10vh;
     }
+    .search {
+        padding: 15px 5px;
+    }
 }
 @media (min-width: 1024px) and (max-width: 1440px){
     .carousel .control-dots {
         position: absolute;
         bottom: 31%;
     }
+    .search {
+        padding: 15px 5px;
+    }
 }
 @media only screen and (max-width: 325px){
     .searchbar{
-        width: 260px;
+        width: 230px;
     }
     .dd-button:after {
         right: 1px !important;
     }
-
+}
+@media only screen and (min-width: 1440px){
+    .search {
+        padding: 15px 5px;
+    }
 }

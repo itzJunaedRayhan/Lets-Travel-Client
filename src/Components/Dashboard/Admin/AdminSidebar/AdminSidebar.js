@@ -30,7 +30,7 @@ const AdminSidebar = () => {
                         <Nav.Link><Link to="/admin/addService"><FontAwesomeIcon className="icon" icon={faPlus} />Add Service</Link></Nav.Link>
                         <Nav.Link><Link to="/admin/orderList"><FontAwesomeIcon className="icon" icon={faList} /> Order List</Link></Nav.Link>
                         <Nav.Link><Link to="/admin/makeAdmin"><FontAwesomeIcon className="icon" icon={faUserAlt} />Make Admin</Link></Nav.Link>
-                        <Nav.Link><Link to="/admin/manage"><FontAwesomeIcon className="icon" icon={faUserEdit} />Manage Services</Link></Nav.Link>
+                        <Nav.Link><Link to="/admin/manage"><FontAwesomeIcon className="icon" icon={faUserEdit} />Manage Orders</Link></Nav.Link>
                     </>
                     }
                         <Nav.Link><Link to={`/dashboard/book/607b1c5db3704f3198a7efd1`}><FontAwesomeIcon className="icon" icon={faCartPlus} />Book</Link></Nav.Link>
