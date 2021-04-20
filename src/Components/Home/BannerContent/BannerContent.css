@@ -52,7 +52,7 @@
 .search-btn{
     position: absolute;
     right: 0;   
-    top: -10px;
+    top: -5px;
     width: 40px;
     height: 40px;
     border: 1px solid transparent;
@@ -108,7 +108,7 @@
         width: 70px !important;
     }
     .search-box{
-        width: 230px;
+        width: 240px;
         height: 37px;
     }
     .search-btn{
