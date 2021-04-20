@@ -42,7 +42,7 @@
     height: 100% !important;
     border: 1px solid transparent;
     border-right: none;
-    padding: 5px;
+    padding: 0px;
     height: 20px !important;
     outline: none;
     color: #fff !important;
@@ -109,13 +109,13 @@
     }
     .search-box{
         width: 230px;
-        height: 32px;
+        height: 37px;
     }
     .search-btn{
         height: 32px;
     }
     .search{
-        padding-bottom: 5px !important;
+        padding-bottom: 15px !important;
     }
     
     ::placeholder{
@@ -178,7 +178,7 @@
         height: 10vh;
     }
     .search {
-        padding: 15px 5px;
+        padding: 5px 5px;
     }
 }
 @media (min-width: 1024px) and (max-width: 1440px){
